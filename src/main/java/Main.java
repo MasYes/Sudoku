@@ -30,15 +30,12 @@ public class Main {
 		int i;
 		while(scan.hasNextInt()){
 			i = scan.nextInt();
-			if(!rows.get(count/9).add(i)){
+			if(!rows.get(count/9).add(i))
 				return false;
-			}
-			if(!columns.get(count % 9).add(i)){
+			if(!columns.get(count % 9).add(i))
 				return false;
-			}
-			if(!areas.get(((count/9)/3)*3 + (count%9)/3).add(i)){
+			if(!areas.get(((count/9)/3)*3 + (count%9)/3).add(i))
 				return false;
-			}
 			count++;
 		}
 		return true;
